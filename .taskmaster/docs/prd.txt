@@ -42,3 +42,4 @@ This product is an automated tool designed to efficiently convert PDF documents 
     4.  The Gemini API returns the OCR result.
     5.  The system formats the OCR result into Markdown.
     6.  The final Markdown content is saved to a user-specified output file. 
+    
