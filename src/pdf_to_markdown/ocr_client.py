@@ -35,13 +35,13 @@ class OcrClient:
                 base_url="https://openrouter.ai/api/v1",
                 api_key=openrouter_key,
             )
-            self.model = model or "google/gemini-2.5-flash-preview-05-20"
+            self.model = model or "google/gemini-2.5-flash"
             logger.info(f"Using OpenRouter client with model: {self.model}")
         elif google_key:
             self.client_type = "google"
             import google.generativeai as genai
             genai.configure(api_key=google_key)
-            self.model = model or 'google/gemini-2.5-flash-preview-05-20'
+            self.model = model or 'gemini-2.5-flash'
             self.client = genai.GenerativeModel(self.model)
             logger.info(f"Using Google Gemini client with model: {self.model}")
         else:

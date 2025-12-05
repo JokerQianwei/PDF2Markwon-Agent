@@ -17,10 +17,10 @@
 
 本项目使用 [Poetry](https://python-poetry.org/) 进行依赖管理。
 
-1.  **克隆仓库** (如果您是通过 git 获取的):
+1.  **克隆仓库**:
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/JokerQianwei/PDF2Markwon-Gemini.git
+    cd ./PDF2Markwon-Gemini
     ```
 
 2.  **安装依赖**:
@@ -87,7 +87,7 @@ poetry run pdf2md -i /path/to/your/document.pdf -o /path/to/your/output.md
 
 ### 指定 OCR 模型
 
-您可以使用 `-m` 或 `--model` 选项来指定进行 OCR 的模型。如果未提供，将使用默认的 `google/gemini-2.5-flash-preview-05-20`。
+您可以使用 `-m` 或 `--model` 选项来指定进行 OCR 的模型。如果未提供，将使用默认的 `google/gemini-2.5-flash`。
 
 ```bash
 # 使用 OpenRouter 支持的另一个模型

@@ -19,8 +19,8 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
 
 1.  **Clone the repository** (if obtained via git):
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/JokerQianwei/PDF2Markwon-Gemini.git
+    cd ./PDF2Markwon-Gemini
     ```
 
 2.  **Install dependencies**:
@@ -87,7 +87,7 @@ poetry run pdf2md -i /path/to/your/document.pdf -o /path/to/your/output.md
 
 ### Specifying OCR Model
 
-You can use the `-m` or `--model` option to specify the model for OCR. If not provided, the default `google/gemini-2.5-flash-preview-05-20` will be used.
+You can use the `-m` or `--model` option to specify the model for OCR. If not provided, the default `google/gemini-2.5-flash` will be used.
 
 ```bash
 # Using another model supported by OpenRouter
