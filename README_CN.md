@@ -74,7 +74,7 @@ export GOOGLE_API_KEY="..."
 最简单的用法是提供一个输入 PDF 文件的路径。程序将自动在同一目录下生成一个同名的 `.md` 文件。
 
 ```bash
-poetry run pdf2md --input-path /path/to/your/document.pdf
+poetry run pdf2md -i /path/to/your/document.pdf -m google/gemini-2.5-flash-lite
 ```
 
 ### 指定输出路径
