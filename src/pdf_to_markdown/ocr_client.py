@@ -18,8 +18,8 @@ class OcrClient:
         otherwise falls back to Google Gemini with 'GOOGLE_API_KEY'.
 
         Args:
-            model (str, optional): The model to use for OCR. 
-                                   Defaults to 'gemini-1.5-flash'.
+            model (str, optional): The model to use for OCR.
+                                   Defaults to the provider-specific default model.
         """
         self.client_type = None
         self.client = None
@@ -35,7 +35,7 @@ class OcrClient:
                 base_url="https://openrouter.ai/api/v1",
                 api_key=openrouter_key,
             )
-            self.model = model or "google/gemini-2.5-flash"
+            self.model = model or "google/gemini-3.1-flash-lite-preview"
             logger.info(f"Using OpenRouter client with model: {self.model}")
         elif google_key:
             self.client_type = "google"

@@ -12,6 +12,7 @@ def test_client_initialization_priority(mocker):
     mock_openai = mocker.patch('openai.OpenAI')
     client = OcrClient()
     assert client.client_type == "openrouter"
+    assert client.model == "google/gemini-3.1-flash-lite-preview"
     mock_openai.assert_called_once_with(
         base_url="https://openrouter.ai/api/v1",
         api_key="fake_or_key",
@@ -24,7 +25,7 @@ def test_client_fallback_to_google(mocker):
     mocker.patch('google.generativeai.configure')
     client = OcrClient()
     assert client.client_type == "google"
-    assert client.model == 'gemini-1.5-flash'
+    assert client.model == 'gemini-2.5-flash'
 
 def test_client_no_keys_raises_error(mocker):
     """Tests that a ConfigurationError is raised if no API keys are found."""

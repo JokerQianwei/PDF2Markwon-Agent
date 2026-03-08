@@ -6,7 +6,7 @@ This is a Python-based command-line tool for converting PDF documents into well-
 
 ## ✨ Features
 
-- **High-precision OCR**: Utilizes the powerful Gemini 2.5 Flash model for text recognition.
+- **High-precision OCR**: Utilizes Gemini models for high-quality text recognition.
 - **Multiple API Support**: Configurable to use either Google Gemini or OpenRouter API through environment variables.
 - **Robust Error Handling**: Includes retry mechanisms and clear error logging.
 - **Easy to Use**: Simple command-line interface with clear options.
@@ -87,7 +87,7 @@ poetry run pdf2md -i /path/to/your/document.pdf -o /path/to/your/output.md
 
 ### Specifying OCR Model
 
-You can use the `-m` or `--model` option to specify the model for OCR. If not provided, the default `google/gemini-2.5-flash` will be used.
+You can use the `-m` or `--model` option to specify the model for OCR. If not provided, OpenRouter defaults to `google/gemini-3.1-flash-lite-preview`, while the direct Google Gemini client defaults to `gemini-2.5-flash`.
 
 ```bash
 # Using another model supported by OpenRouter
@@ -119,5 +119,3 @@ poetry run pdf2md -i PDF/HNeRV.pdf
 ```
 
 The converted Markdown file will be saved as `PDF/HNeRV.md` by default.
-
-

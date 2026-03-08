@@ -6,7 +6,7 @@
 
 ## ✨ 功能特性
 
-- **高精度 OCR**: 利用强大的 Gemini 2.5 Flash 模型进行文本识别。
+- **高精度 OCR**: 使用 Gemini 系列模型进行高质量文本识别。
 - **支持多种 API**: 可通过环境变量配置使用 Google Gemini 或 OpenRouter API。
 - **健壮的错误处理**: 包含重试机制和清晰的错误日志。
 - **易于使用**: 简洁的命令行界面，提供明确的选项。
@@ -74,7 +74,7 @@ export GOOGLE_API_KEY="..."
 最简单的用法是提供一个输入 PDF 文件的路径。程序将自动在同一目录下生成一个同名的 `.md` 文件。
 
 ```bash
-poetry run pdf2md -i /path/to/your/document.pdf -m google/gemini-2.5-flash-lite
+poetry run pdf2md -i /path/to/your/document.pdf
 ```
 
 ### 指定输出路径
@@ -87,7 +87,7 @@ poetry run pdf2md -i /path/to/your/document.pdf -o /path/to/your/output.md
 
 ### 指定 OCR 模型
 
-您可以使用 `-m` 或 `--model` 选项来指定进行 OCR 的模型。如果未提供，将使用默认的 `google/gemini-2.5-flash`。
+您可以使用 `-m` 或 `--model` 选项来指定进行 OCR 的模型。如果未提供，OpenRouter 默认将使用 `google/gemini-3.1-flash-lite-preview`，而直接使用 Google Gemini 客户端时默认仍为 `gemini-2.5-flash`。
 
 ```bash
 # 使用 OpenRouter 支持的另一个模型
@@ -122,4 +122,3 @@ poetry run pdf2md -i PDF/HNeRV.pdf
 
 ---
 *此项目由 AI 编程助手驱动开发*
-
