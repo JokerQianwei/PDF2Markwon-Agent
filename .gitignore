@@ -33,3 +33,8 @@ src/**/*.pyc
 /__pycache__
 *.pyd
 *.so
+
+# Test coverage
+.coverage
+.coverage.*
+htmlcov/
